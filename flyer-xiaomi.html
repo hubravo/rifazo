@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RIFAZO · Flyer Xiaomi</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Bebas+Neue&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#020912;
+    display:flex; align-items:center; justify-content:center;
+    min-height:100vh; padding:20px;
+    font-family:'Poppins',sans-serif;
+  }
+  /* Lienzo del flyer: formato vertical para WhatsApp/historia */
+  .flyer {
+    width:1080px; height:1350px;
+    transform-origin:top center;
+    background:
+      radial-gradient(circle at 80% 0%, rgba(0,229,176,0.18), transparent 45%),
+      radial-gradient(circle at 0% 100%, rgba(0,120,255,0.12), transparent 50%),
+      linear-gradient(160deg,#071B36,#020912 70%);
+    position:relative; overflow:hidden;
+    color:#fff;
+    padding:70px 64px;
+    display:flex; flex-direction:column;
+  }
+  /* marca de agua diagonal sutil */
+  .watermark {
+    position:absolute; bottom:-60px; right:-40px;
+    font-family:'Bebas Neue',sans-serif; font-size:340px;
+    color:rgba(255,255,255,0.025); line-height:0.8;
+    letter-spacing:-10px; transform:rotate(-8deg);
+    pointer-events:none;
+  }
+  /* HEADER */
+  .top { display:flex; align-items:center; justify-content:space-between; }
+  .logo { font-family:'Poppins'; font-weight:900; font-size:54px; letter-spacing:-2px; }
+  .logo .za { color:#00E5B0; }
+  .badge-tuc {
+    background:rgba(0,229,176,0.12); border:1px solid rgba(0,229,176,0.35);
+    color:#00E5B0; font-weight:700; font-size:20px;
+    padding:10px 22px; border-radius:100px;
+  }
+  /* EYEBROW */
+  .eyebrow {
+    margin-top:54px;
+    font-weight:700; font-size:26px; letter-spacing:4px;
+    text-transform:uppercase; color:#FFD700;
+  }
+  /* TITULO PREMIO */
+  .premio {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:128px; line-height:0.92; letter-spacing:1px;
+    margin-top:10px;
+  }
+  .premio .hl { color:#00E5B0; display:block; }
+  /* FOTO */
+  .foto-wrap {
+    margin-top:38px; border-radius:28px; overflow:hidden;
+    border:1px solid rgba(255,255,255,0.1);
+    background:linear-gradient(135deg, rgba(0,229,176,0.08), rgba(0,120,255,0.08));
+    height:430px; display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .foto-wrap .placeholder {
+    text-align:center; color:rgba(255,255,255,0.4); font-size:24px; font-weight:600;
+    padding:40px;
+  }
+  .foto-wrap .placeholder .icon { font-size:90px; display:block; margin-bottom:16px; }
+  .foto-wrap img { width:100%; height:100%; object-fit:cover; }
+  /* SPECS */
+  .specs {
+    margin-top:30px; font-size:24px; color:rgba(255,255,255,0.75);
+    line-height:1.5; font-weight:400;
+  }
+  /* PRECIO destacado */
+  .precio-row {
+    margin-top:auto; display:flex; align-items:flex-end; justify-content:space-between;
+    padding-top:40px;
+  }
+  .precio-box .label { font-size:24px; color:rgba(255,255,255,0.6); font-weight:600; }
+  .precio-box .valor {
+    font-family:'Bebas Neue'; font-size:130px; line-height:0.9; color:#fff;
+  }
+  .precio-box .valor small { font-size:40px; color:#00E5B0; }
+  .cta {
+    background:#00E5B0; color:#04101F; font-weight:800; font-size:30px;
+    padding:26px 40px; border-radius:20px; text-align:center;
+    box-shadow:0 12px 40px rgba(0,229,176,0.3);
+  }
+  .cta .sub { font-size:19px; font-weight:600; opacity:0.7; display:block; margin-top:4px; }
+  /* FOOTER condiciones */
+  .footer {
+    margin-top:36px; border-top:1px solid rgba(255,255,255,0.1); padding-top:26px;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:21px; color:rgba(255,255,255,0.65); font-weight:500;
+  }
+  .footer strong { color:#fff; }
+  .sorteo-tag { color:#FFD700; font-weight:700; }
+</style>
+</head>
+<body>
+  <div class="flyer" id="flyer">
+    <div class="watermark">RIFAZO</div>
+
+    <div class="top">
+      <div class="logo">RIFA<span class="za">ZO</span> 🔥</div>
+      <div class="badge-tuc">📍 Tucumán</div>
+    </div>
+
+    <div class="eyebrow">★ Rifazo destacado · 100 números</div>
+
+    <div class="premio">
+      Ganate un<br>
+      <span class="hl">Xiaomi Redmi 15C</span>
+    </div>
+
+    <div class="foto-wrap" id="fotoWrap">
+      <!-- Reemplazá este bloque pegando tu foto: <img src="URL_O_BASE64"> -->
+      <div class="placeholder">
+        <span class="icon">📱</span>
+        Pegá acá la foto del Redmi 15C<br>
+        <span style="font-size:18px;opacity:0.7">(editá el archivo y poné tu imagen)</span>
+      </div>
+    </div>
+
+    <div class="specs">
+      Pantalla 6,9" · 6GB RAM · 128GB (ampliable a 1TB)<br>
+      Cámara 50MP · Resistente a salpicaduras
+    </div>
+
+    <div class="precio-row">
+      <div class="precio-box">
+        <div class="label">Cada número</div>
+        <div class="valor">$3.500<small> / nro.</small></div>
+      </div>
+      <div class="cta">
+        Elegí tu número
+        <span class="sub">hubravo.github.io/rifazo</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>Pagás por <strong>transferencia</strong> · Tu número al instante</div>
+      <div class="sorteo-tag">Sortea al completarse · Lotería de Tucumán</div>
+    </div>
+  </div>
+
+<script>
+  // Escalar el flyer para que entre en pantalla al visualizarlo
+  function escalar(){
+    var f=document.getElementById('flyer');
+    var escala=Math.min(window.innerWidth/1080, window.innerHeight/1350)*0.95;
+    if(escala<1) f.style.transform='scale('+escala+')';
+  }
+  escalar(); window.addEventListener('resize',escalar);
+</script>
+</body>
+</html>
